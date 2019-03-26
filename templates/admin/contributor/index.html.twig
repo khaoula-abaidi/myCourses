@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}Gérer les utilisateurs{% endblock %}
+{% block body %}
+    <div class="container mt-4">
+        <h1>Gérer les utilisateurs</h1>
+        <table class="table table-stripped">
+            <thead>
+            <tr>
+                <th>LOGIN</th>
+                <th>PASSWORD</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.login }}</td>
+                    <td>{{ user.pwd }}</td>
+                    <td><a class="btn-primary" href="#">Editer</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    </div>
+{% endblock %}
